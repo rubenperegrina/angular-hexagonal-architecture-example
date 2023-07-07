@@ -1,0 +1,12 @@
+<ng-container *ngIf="listUsers.length > 1; else templateEmpty">
+    <ul *ngFor="let user of listUsers; trackByFn: trackByFn">
+        <li><b>Name: </b>{{user.name}}</li>
+        <li><b>Email: </b>{{user.email}}</li>
+        <li><b>Website: </b>{{user.website}}</li>
+        <li><b>Phone: </b>{{user.phone}}</li>
+    </ul>
+</ng-container>
+
+<ng-template #templateEmpty>
+	We don't have users yet
+</ng-template>

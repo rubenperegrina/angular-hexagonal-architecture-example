@@ -1,14 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { UsersPageComponent } from './ui/pages/users-page/users-page.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  imports: [UsersPageComponent],
+  template: `<users-page/>`
 })
-export class AppComponent {
-  title = 'angular-hexagonal-architecture-example';
-}
+export class AppComponent {}
